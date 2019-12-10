@@ -30,20 +30,18 @@ public class Player
     {
         return this.health;
     }
-    public double addHealth()
+    public void addHealth()
     {
         this.health += 150;
-        return this.health;
     }
     public void remHealth()
     {
         this.health = health-this.thirstFactor;
     }
     
-    public double addThirst()
+    public void addThirst()
     {
         this.thirstFactor += this.thirstRate;
-        return this.thirstFactor;
     }
     public double getThirst()
     {
@@ -77,12 +75,12 @@ public class Player
                 this.thirstRate = 0.2;
                 break;
             case "Medium":
-                this.health = 60;
-                this.thirstFactor = 5;
+                this.health = 100;
+                this.thirstFactor = 4;
                 this.thirstRate = 0.5;
                 break;
             case "Hard":
-                this.health = 40;
+                this.health = 100;
                 this.thirstFactor = 8;
                 this.thirstRate = 1;
                 break;
