@@ -56,7 +56,6 @@ public class Btns {
             
             if ( Room.Left.list.getSelectionModel().getSelectedItem().getName().equals("Lifestraw") )
             {
-                boolean removeStraw = false;
                 Main.Game.items.forEach(Item2 -> {
                 if ( Item2.getName().equals("Bucket with Water") )
                     {
@@ -65,7 +64,7 @@ public class Btns {
                         this.removeStraw = true;
                     }
                 });
-                if ( this.removeStraw == true && Room.Left.list.getSelectionModel().getSelectedItem().getName().equals("Lifestraw")) 
+                if ( this.removeStraw && Room.Left.list.getSelectionModel().getSelectedItem().getName().equals("Lifestraw"))
                 {
                     Main.Game.items.remove(Room.Left.list.getSelectionModel().getSelectedItem());
                     this.removeStraw = false;
@@ -77,31 +76,31 @@ public class Btns {
                 Main.Game.items.remove(Room.Left.list.getSelectionModel().getSelectedItem());
                 if ( Main.Game.player.getLocation().equals("Town") )
                 {
-                    Game.primarystage.setScene(new Room.MainScene().setScene());
+                    Game.primaryStage.setScene(new Room.MainScene().setScene());
                 }
                 else if ( Main.Game.player.getLocation().equals("Desert") )
                 {
-                    Game.primarystage.setScene(new Room.MainScene().setScene());
+                    Game.primaryStage.setScene(new Room.MainScene().setScene());
                 }
                 else if ( Main.Game.player.getLocation().equals("River") )
                 {
-                    Game.primarystage.setScene(new Room.MainScene().setScene());
+                    Game.primaryStage.setScene(new Room.MainScene().setScene());
                 }
                 else if ( Main.Game.player.getLocation().equals("Livingroom") )
                 {
-                    Game.primarystage.setScene(new Room.MainScene().setScene());
+                    Game.primaryStage.setScene(new Room.MainScene().setScene());
                 }
                 else if ( Main.Game.player.getLocation().equals("Jungle") )
                 {
-                    Game.primarystage.setScene(new Room.MainScene().setScene());
+                    Game.primaryStage.setScene(new Room.MainScene().setScene());
                 }
                 else if ( Main.Game.player.getLocation().equals("Entrance") )
                 {
-                    Game.primarystage.setScene(new Room.MainScene().setScene());
+                    Game.primaryStage.setScene(new Room.MainScene().setScene());
                 }
                 else if ( Main.Game.player.getLocation().equals("Bathroom") )
                 {
-                    Game.primarystage.setScene(new Room.MainScene().setScene());
+                    Game.primaryStage.setScene(new Room.MainScene().setScene());
                 }
             }
             });
@@ -134,7 +133,7 @@ public class Btns {
                 Game.player.setName(Main.Game.intro.textf.setEntryName().getText());
                 Game.player.setDifficulty();
                 Main.Game.player.setLocation("Bathroom");
-                Game.primarystage.setScene(new Room.MainScene().setScene());
+                Game.primaryStage.setScene(new Room.MainScene().setScene());
                 
                 Stage stage2 = new Stage();
                 VBox pane2 = new VBox(); 
@@ -180,7 +179,7 @@ public class Btns {
         Button button = new Button("Quit");
         button.setPrefSize(sizeW, sizeH);
         button.setOnMousePressed(e -> {
-            Main.Game.primarystage.close();
+            Main.Game.primaryStage.close();
         });
         return button;
     }
@@ -190,12 +189,12 @@ public class Btns {
         button.setPrefSize(sizeW, sizeH);
         button.setOnMousePressed(e -> {
             if (Main.Game.player.getHealth() - Main.Game.player.getThirst() < 0) {
-                Game.primarystage.setScene(new Scenes.Finish().setFailedScene());
+                Game.primaryStage.setScene(new Scenes.Finish().setFailedScene());
             } else {
                 Main.Game.player.addThirst();
                 Main.Game.player.remHealth();
                 Main.Game.player.setLocation("Entrance");
-                Game.primarystage.setScene(new Room.MainScene().setScene());
+                Game.primaryStage.setScene(new Room.MainScene().setScene());
             }
         });
         return button;
@@ -206,12 +205,12 @@ public class Btns {
         button.setPrefSize(sizeW, sizeH);
         button.setOnMousePressed(e -> {
             if (Main.Game.player.getHealth() - Main.Game.player.getThirst() < 0) {
-                Game.primarystage.setScene(new Scenes.Finish().setFailedScene());
+                Game.primaryStage.setScene(new Scenes.Finish().setFailedScene());
             } else {
                 Main.Game.player.addThirst();
                 Main.Game.player.remHealth();
                 Main.Game.player.setLocation("Jungle");
-                Game.primarystage.setScene(new Room.MainScene().setScene());
+                Game.primaryStage.setScene(new Room.MainScene().setScene());
             }
         });
         return button;
@@ -222,12 +221,12 @@ public class Btns {
         button.setPrefSize(sizeW, sizeH);
         button.setOnMousePressed(e -> {
             if (Main.Game.player.getHealth() - Main.Game.player.getThirst() < 0) {
-                Game.primarystage.setScene(new Scenes.Finish().setFailedScene());
+                Game.primaryStage.setScene(new Scenes.Finish().setFailedScene());
             } else {
                 Main.Game.player.addThirst();
                 Main.Game.player.remHealth();
                 Main.Game.player.setLocation("Livingroom");
-                Game.primarystage.setScene(new Room.MainScene().setScene());
+                Game.primaryStage.setScene(new Room.MainScene().setScene());
             }
         });
         return button;
@@ -239,12 +238,12 @@ public class Btns {
         button.setOnMousePressed(e -> {
 
             if (Main.Game.player.getHealth() - Main.Game.player.getThirst() < 0) {
-                Game.primarystage.setScene(new Scenes.Finish().setFailedScene());
+                Game.primaryStage.setScene(new Scenes.Finish().setFailedScene());
             } else {
                 Main.Game.player.addThirst();
                 Main.Game.player.remHealth();
                 Main.Game.player.setLocation("Bathroom");
-                Game.primarystage.setScene(new Room.MainScene().setScene());
+                Game.primaryStage.setScene(new Room.MainScene().setScene());
             }
         });
         return button;
@@ -256,12 +255,12 @@ public class Btns {
         button.setOnMousePressed(e
                 -> {
             if (Main.Game.player.getHealth() - Main.Game.player.getThirst() < 0) {
-                Game.primarystage.setScene(new Scenes.Finish().setFailedScene());
+                Game.primaryStage.setScene(new Scenes.Finish().setFailedScene());
             } else {
                 Main.Game.player.addThirst();
                 Main.Game.player.remHealth();
                 Main.Game.player.setLocation("Desert");
-                Game.primarystage.setScene(new Room.MainScene().setScene());
+                Game.primaryStage.setScene(new Room.MainScene().setScene());
             }
         });
         return button;
@@ -272,12 +271,12 @@ public class Btns {
         button.setPrefSize(sizeW, sizeH);
         button.setOnMousePressed(e -> {
             if (Main.Game.player.getHealth() - Main.Game.player.getThirst() < 0) {
-                Game.primarystage.setScene(new Scenes.Finish().setFailedScene());
+                Game.primaryStage.setScene(new Scenes.Finish().setFailedScene());
             } else {
                 Main.Game.player.addThirst();
                 Main.Game.player.remHealth();
                 Main.Game.player.setLocation("River");
-                Game.primarystage.setScene(new Room.MainScene().setScene());
+                Game.primaryStage.setScene(new Room.MainScene().setScene());
             }
         });
         return button;
@@ -289,12 +288,12 @@ public class Btns {
         button.setOnMousePressed(e
                 -> {
             if (Main.Game.player.getHealth() - Main.Game.player.getThirst() < 0) {
-                Game.primarystage.setScene(new Scenes.Finish().setFailedScene());
+                Game.primaryStage.setScene(new Scenes.Finish().setFailedScene());
             } else {
                 Main.Game.player.addThirst();
                 Main.Game.player.remHealth();
                 Main.Game.player.setLocation("Town");
-                Game.primarystage.setScene(new Room.MainScene().setScene());
+                Game.primaryStage.setScene(new Room.MainScene().setScene());
             }
         });
         return button;
@@ -306,7 +305,7 @@ public class Btns {
         button.setStyle("-fx-background-color:#00ff00;"+"-fx-background-radius:0;"+"-fx-border-color:black;"+"-fx-border-width: 1 1 1 1;"+"-fx-background-insets: 0;");
         button.setOnMousePressed(e -> {
             if (Main.Game.player.getLocation().equals("Livingroom")) {
-                Game.primarystage.setScene(new Scenes.Finish().setWinScene());
+                Game.primaryStage.setScene(new Scenes.Finish().setWinScene());
             } 
         });
         return button;

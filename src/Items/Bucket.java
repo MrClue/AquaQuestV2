@@ -14,6 +14,7 @@ public class Bucket extends Item
 
     public Bucket(String name)
     {
+        super(name);
         this.name = name;
     }
     @Override
@@ -65,7 +66,7 @@ public class Bucket extends Item
     @Override
     public String toString()
     {
-        if (clean == true)
+        if (clean)
         {
             this.name = "Cleansed Bucket with Water";
         }

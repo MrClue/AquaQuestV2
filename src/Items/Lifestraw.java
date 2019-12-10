@@ -13,6 +13,7 @@ public class Lifestraw extends Item
     
     public Lifestraw(String name)
     {
+        super(name);
         this.name = name;
     }
     

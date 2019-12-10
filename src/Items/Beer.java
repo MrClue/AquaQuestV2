@@ -16,6 +16,7 @@ public class Beer extends Item
     
     public Beer(String name)
     {
+        super(name);
         this.name = name;
     }
     

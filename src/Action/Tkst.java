@@ -40,20 +40,19 @@ public class Tkst
     public Text showDifficulty()
     {
         Text text = new Text("Difficulty: " + Main.Game.SETTINGS.getDifficulty());
-        if ( Main.Game.SETTINGS.getDifficulty().equals("Easy") )
-        {
-            text.setFill(Color.GREEN);
-            text.setFont(Font.font(16));
-        }
-        else if ( Main.Game.SETTINGS.getDifficulty().equals("Medium") )
-        {
-            text.setFill(Color.ORANGE);
-            text.setFont(Font.font(16));
-        }   
-        else if ( Main.Game.SETTINGS.getDifficulty().equals("Hard") )
-        {
-            text.setFill(Color.RED);
-            text.setFont(Font.font(16));
+        switch (Main.Game.SETTINGS.getDifficulty()) {
+            case "Easy":
+                text.setFill(Color.GREEN);
+                text.setFont(Font.font(16));
+                break;
+            case "Medium":
+                text.setFill(Color.ORANGE);
+                text.setFont(Font.font(16));
+                break;
+            case "Hard":
+                text.setFill(Color.RED);
+                text.setFont(Font.font(16));
+                break;
         }
         return text;
     }

@@ -8,11 +8,11 @@ public class Texflds
     public static TextField textfield = new TextField("Enter Your name..."); 
     public TextField setEntryName()
     {
-        this.textfield.setAlignment(Pos.CENTER);
-        this.textfield.setOnMousePressed(e -> 
+        textfield.setAlignment(Pos.CENTER);
+        textfield.setOnMousePressed(e ->
         {
-            this.textfield.setText("");
+            textfield.setText("");
         });
-        return this.textfield;
+        return textfield;
     }   
 }

@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 public class Game extends Application
 {
     public static String[] args;
-    public static Stage primarystage;
+    public static Stage primaryStage;
     public static ObservableList<Items.Item> items = FXCollections.observableArrayList();
     //public static MainCentral startGame = new MainCentral(); //Causes a crash - Aner ik hvad det gør tho...
     public static Room.Introduction intro = new Room.Introduction();
@@ -19,11 +19,11 @@ public class Game extends Application
     @Override 
     public void start(Stage stage) throws Exception
     {
-        primarystage = stage;
-        primarystage.setScene(new Scenes.Welcome().setWelcomeScene());
-        primarystage.getIcons().add(new Image("images/aq_logo.png"));
-        primarystage.setResizable(false);
-        primarystage.show();
+        primaryStage = stage;
+        primaryStage.setScene(new Scenes.Welcome().setWelcomeScene());
+        primaryStage.getIcons().add(new Image("images/aq_logo.png"));
+        primaryStage.setResizable(false);
+        primaryStage.show();
     }
     
     public static void main(String[] args) 

@@ -8,12 +8,12 @@ public class MainCentral
     public MainCentral() {
 
     }
-    private Stage primarystage = new Stage(); 
+    private Stage primaryStage = new Stage();
     public static Scene scene;
     
     public void changeScene(Scene scene)
     {
         this.scene = scene;
-        this.primarystage.setScene(scene);
+        this.primaryStage.setScene(scene);
     }
 }
