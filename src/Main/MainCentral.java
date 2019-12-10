@@ -13,7 +13,7 @@ public class MainCentral
     
     public void changeScene(Scene scene)
     {
-        this.scene = scene;
+        MainCentral.scene = scene;
         this.primaryStage.setScene(scene);
     }
 }

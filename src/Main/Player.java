@@ -3,7 +3,7 @@ package Main;
 public class Player 
 {
     protected double health = 80, thirstFactor = 3, thirstRate = 0.3;
-    protected String name, location = "Bathroom";
+    protected String name, location;
     protected boolean beerUsed = true, lifestrawUsed = true;
 
     public Player()
@@ -70,23 +70,22 @@ public class Player
     
     public void setDifficulty()
     {
-        if (Main.Game.SETTINGS.getDifficulty().equals("Easy"))
-        {
-           this.health = 100;
-           this.thirstFactor = 2;
-           this.thirstRate = 0.2;
-        }
-        else if (Main.Game.SETTINGS.getDifficulty().equals("Medium"))
-        {
-           this.health = 60;
-           this.thirstFactor = 5;
-           this.thirstRate = 0.5;
-        }
-        else if (Main.Game.SETTINGS.getDifficulty().equals("Hard"))
-        {
-           this.health = 40;
-           this.thirstFactor = 8;
-           this.thirstRate = 1;
+        switch (Game.SETTINGS.getDifficulty()) {
+            case "Easy":
+                this.health = 100;
+                this.thirstFactor = 2;
+                this.thirstRate = 0.2;
+                break;
+            case "Medium":
+                this.health = 60;
+                this.thirstFactor = 5;
+                this.thirstRate = 0.5;
+                break;
+            case "Hard":
+                this.health = 40;
+                this.thirstFactor = 8;
+                this.thirstRate = 1;
+                break;
         }
     }
 }

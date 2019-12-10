@@ -14,11 +14,10 @@ public class Game extends Application
     //public static MainCentral startGame = new MainCentral(); //Causes a crash - Aner ik hvad det gør tho...
     public static Room.Introduction intro = new Room.Introduction();
     public static Settings.Difficulty SETTINGS = new Settings.Difficulty();
-    public static Player player = new Player(); 
+    public static Player player = new Player();
     
     @Override 
-    public void start(Stage stage) throws Exception
-    {
+    public void start(Stage stage) {
         primaryStage = stage;
         primaryStage.setScene(new Scenes.Welcome().setWelcomeScene());
         primaryStage.getIcons().add(new Image("images/aq_logo.png"));
