@@ -1,73 +1,66 @@
 package Main;
 
-public class Player 
-{
+public class Player {
     protected double health = 80, thirstFactor = 3, thirstRate = 0.3;
     protected String name, location;
     protected boolean beerUsed = true, lifestrawUsed = true;
 
-    public Player()
-    {
+    public Player() {
     }
-    public void setName(String name)
-    {
+
+    public void setName(String name) {
         this.name = name;
     }
-    public String getName()
-    {
+
+    public String getName() {
         return this.name;
     }
-    public String getLocation()
-    {
+
+    public String getLocation() {
         return this.location;
     }
-    public void setLocation(String location)
-    {
+
+    public void setLocation(String location) {
         this.location = location;
     }
-    
-    public double getHealth()
-    {
+
+    public double getHealth() {
         return this.health;
     }
-    public void addHealth()
-    {
+
+    public void addHealth() {
         this.health += 150;
     }
-    public void remHealth()
-    {
-        this.health = health-this.thirstFactor;
+
+    public void remHealth() {
+        this.health = health - this.thirstFactor;
     }
-    
-    public void addThirst()
-    {
+
+    public void addThirst() {
         this.thirstFactor += this.thirstRate;
     }
-    public double getThirst()
-    {
+
+    public double getThirst() {
         return this.thirstFactor;
     }
-    
-    public boolean getBeerUsed()
-    {
+
+    public boolean getBeerUsed() {
         return this.beerUsed;
     }
-    public void setBeerUsed()
-    {
+
+    public void setBeerUsed() {
         this.beerUsed = false;
     }
-    
-    public boolean getStrawUsed()
-    {
+
+    public boolean getStrawUsed() {
         return this.lifestrawUsed;
     }
-    public void setStrawUsed()
-    {
+
+    public void setStrawUsed() {
         this.lifestrawUsed = false;
     }
-    
-    public void setDifficulty()
-    {
+
+    public void setDifficulty() {
         switch (Game.SETTINGS.getDifficulty()) {
             case "Easy":
                 this.health = 100;

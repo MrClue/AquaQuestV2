@@ -5,14 +5,11 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 
-public class Center 
-{
-    public Center()
-    {
+public class Center {
+    public Center() {
     }
-    
-    public BorderPane setCenter()
-    {
+
+    public BorderPane setCenter() {
         BorderPane pane = new BorderPane();
         pane.setStyle("-fx-background-color: LIGHTSTEELBLUE");
 

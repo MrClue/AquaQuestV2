@@ -3,14 +3,11 @@ package Room;
 import javafx.geometry.Pos;
 import javafx.scene.layout.HBox;
 
-public class Bottom 
-{
-    public Bottom()
-    {
+public class Bottom {
+    public Bottom() {
     }
-    
-    public HBox setBottom()
-    {
+
+    public HBox setBottom() {
         HBox box = new HBox();
         switch (Main.Game.player.getLocation()) {
             case "Bathroom":

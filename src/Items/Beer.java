@@ -1,4 +1,5 @@
 package Items;
+
 import javafx.geometry.Pos;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -10,27 +11,24 @@ import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 
-public class Beer extends Item
-{
+public class Beer extends Item {
     public String name;
-    
-    public Beer(String name)
-    {
+
+    public Beer(String name) {
         super(name);
         this.name = name;
     }
-    
+
     @Override
-    public StackPane getPane()
-    {
-        StackPane pane = new StackPane(); 
-        VBox box = new VBox(); 
+    public StackPane getPane() {
+        StackPane pane = new StackPane();
+        VBox box = new VBox();
         Image img = new Image("images/beer_t.png");
         ImageView imgw = new ImageView(img);
         imgw.setPreserveRatio(true);
         imgw.setFitWidth(40);
         imgw.setRotate(30);
-                
+
         Text txt = new Text("[Legendary]");
         Text txt2 = new Text("Beer");
         box.getChildren().addAll(txt, txt2);
@@ -42,11 +40,10 @@ public class Beer extends Item
         pane.getChildren().add(imgw);
         pane.getChildren().add(box);
         pane.setPrefSize(40, 40);
-        
-        pane.setOnMousePressed(e -> 
+
+        pane.setOnMousePressed(e ->
         {
-            if ( Main.Game.player.getBeerUsed() )
-            {
+            if (Main.Game.player.getBeerUsed()) {
                 Main.Game.items.add(new Items.Beer(this.name));
                 Main.Game.player.setBeerUsed();
                 pane.setOpacity(0);
@@ -56,14 +53,12 @@ public class Beer extends Item
         return pane;
     }
 
-    public String getName()
-    { 
+    public String getName() {
         return this.name;
     }
-    
+
     @Override
-    public String toString()
-    {
+    public String toString() {
         return this.name;
     }
 }

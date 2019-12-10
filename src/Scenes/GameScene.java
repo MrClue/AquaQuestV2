@@ -1,20 +1,18 @@
 package Scenes;
 
-import Room.Left;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 
-public class GameScene 
-{
+public class GameScene {
     public Scene scene;
-    public GameScene()
-    {
+
+    public GameScene() {
     }
-    public Scene setGameScene()
-    {
+
+    public Scene setGameScene() {
         BorderPane pane = new BorderPane();
         pane.setStyle("-fx-background-color: LIGHTSTEELBLUE");
-        this.scene = new Scene(pane); 
+        this.scene = new Scene(pane);
         return scene;
     }
 }
