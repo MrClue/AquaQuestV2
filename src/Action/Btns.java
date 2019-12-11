@@ -1,6 +1,7 @@
 package Action;
 
 import Main.Game;
+import Main.Player;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -106,7 +107,7 @@ public class Btns {
             } else {
                 Game.player.setName(Main.Game.intro.textf.setEntryName().getText());
                 Game.player.setDifficulty();
-                Main.Game.player.setLocation("Bathroom");
+                Main.Game.player.setLocation(Game.player.getLocation());
                 Game.primaryStage.setScene(new Room.MainScene().setScene());
 
                 Stage stage2 = new Stage();
@@ -114,7 +115,7 @@ public class Btns {
                 pane2.setSpacing(8);
                 pane2.setAlignment(Pos.CENTER);
 
-                Text txt1 = new Text("Welcome to Aquaquest " + Main.Game.player.getName());
+                Text txt1 = new Text("Welcome to AquaQuest " + Main.Game.player.getName());
                 Text txt2 = new Text("You have been assigned a task by your parents.");
                 Text txt3 = new Text("Your task is to collect a bucket filled with delicious clean water!");
                 Text txt4 = new Text("But you must be quick!...");

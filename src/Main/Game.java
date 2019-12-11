@@ -10,7 +10,6 @@ public class Game extends Application {
     public static String[] args;
     public static Stage primaryStage;
     public static ObservableList<Items.Item> items = FXCollections.observableArrayList();
-    //public static MainCentral startGame = new MainCentral(); //Causes a crash - Aner ik hvad det gør tho...
     public static Room.Introduction intro = new Room.Introduction();
     public static Settings.Difficulty SETTINGS = new Settings.Difficulty();
     public static Player player = new Player();

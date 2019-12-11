@@ -37,8 +37,6 @@ public class Center {
                 break;
         }
         pane.setBottom(ItemsAdder.addStuff());
-
-        Main.MainCentral.scene = new Scene(pane);
         return pane;
     }
 }

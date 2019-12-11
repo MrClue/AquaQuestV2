@@ -18,8 +18,6 @@ public class MainScene {
         pane.setBottom(new Room.Bottom().setBottom());
         pane.setPadding(new Insets(10));
 
-        Scene scene = new Scene(pane);
-        Main.MainCentral.scene = scene;
-        return scene;
+        return new Scene(pane);
     }
 }

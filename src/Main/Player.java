@@ -6,6 +6,7 @@ public class Player {
     protected boolean beerUsed = true, lifestrawUsed = true;
 
     public Player() {
+        this.location = "Entrance";
     }
 
     public void setName(String name) {
@@ -68,12 +69,12 @@ public class Player {
                 this.thirstRate = 0.2;
                 break;
             case "Medium":
-                this.health = 100;
+                this.health = 60;
                 this.thirstFactor = 4;
                 this.thirstRate = 0.5;
                 break;
             case "Hard":
-                this.health = 100;
+                this.health = 40;
                 this.thirstFactor = 8;
                 this.thirstRate = 1;
                 break;
